@@ -1,0 +1,8 @@
+project: savantenvs/ish
+target: fuzz_ish
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/fuzz_ish/testsuite
+cmds:
+  - cmd: /mayhem/fuzz_ish @@
+    timeout: 30
